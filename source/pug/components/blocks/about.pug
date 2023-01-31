@@ -1,0 +1,28 @@
+mixin about()
+  -
+    const about = {
+      title: "Несколько фактов о нас",
+      list: [
+        {
+          text: 'Самый широкий выбор велосипедов!'
+        },
+        {
+          text: 'Доставка велосипедов по всей России!'
+        },
+        {
+          text: 'Большой выбор крутых аксессуаров!'
+        },
+        {
+          text: 'Профессиональные консультации!'
+        },
+      ],
+    }
+
+  section#about.about
+    .container.container--xl
+      h2.about__title.title.title--h2.title--light-black!= about.title
+      ul.about__list
+        each item in about.list
+          li.about__item
+            p.about__text!= item.text
+

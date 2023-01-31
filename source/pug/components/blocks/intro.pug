@@ -1,0 +1,11 @@
+mixin intro()
+  section.section.intro&attributes(attributes)
+    .container
+      //- .intro__bg
+        +img("content", "bike", "jpg", 1440, 825, "background")
+      .intro__content
+        .intro__caption
+          h1.intro__title.title.title--h1 Мы продаем<br>велосипеды
+          p.intro__text Наш магазин отбирает только самые лучшие велосипеды для продажи
+        +form()
+

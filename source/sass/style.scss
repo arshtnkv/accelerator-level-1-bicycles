@@ -1,0 +1,24 @@
+@import "vendor/normalize";
+
+@import "variables";
+@import "mixins";
+@import "global/fonts";
+@import "global/reboot";
+@import "global/utils";
+@import "global/container";
+
+@import "blocks/header";
+@import "blocks/main-nav";
+@import "blocks/footer";
+@import "blocks/title";
+@import "blocks/btn";
+@import "blocks/link";
+@import "blocks/custom-input";
+@import "blocks/form";
+@import "blocks/intro";
+@import "blocks/about";
+@import "blocks/gallery";
+@import "blocks/video";
+@import "blocks/video-block";
+@import "blocks/map";
+@import "blocks/contacts";

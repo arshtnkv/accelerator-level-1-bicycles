@@ -1,0 +1,50 @@
+mixin gallery()
+  -
+    const gallery = {
+      title: "Виды велосипедов",
+      list: [
+        {
+          caption: "Дорожный велосипед",
+          img: {
+            path: "content/gallery",
+            name: "img-1",
+            format: "jpg",
+            width: 342,
+            height: 503,
+            altText: "Дорожный велосипед"
+          }
+        },
+        {
+          caption: "Горный велосипед",
+          img: {
+            path: "content/gallery",
+            name: "img-2",
+            format: "jpg",
+            width: 342,
+            height: 503,
+            altText: "Горный велосипед"
+          }
+        },
+        {
+          caption: "Детский велосипед",
+          img: {
+            path: "content/gallery",
+            name: "img-3",
+            format: "jpg",
+            width: 342,
+            height: 503,
+            altText: "Детский велосипед"
+          }
+        },
+      ],
+    }
+
+  section#gallery.gallery
+    .container.container--xl
+      h2.gallery__title.title.title--h2!= gallery.title
+      ul.gallery__list
+        each item in gallery.list
+          li.gallery__item
+            figure
+              +picture(item.img.path, item.img.name, item.img.format, item.img.width, item.img.height, item.img.altText)
+              figcaption!= item.caption

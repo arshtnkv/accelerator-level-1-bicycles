@@ -1,0 +1,41 @@
+.title {
+  margin: 0;
+  font-family: $ff-opensans;
+  font-weight: 700;
+  line-height: 1;
+  color: inherit;
+
+  &--h1 {
+    font-size: 46px;
+    line-height: 64px;
+
+    @include vp-767 {
+      font-size: 30px;
+      line-height: 42px;
+    }
+  }
+
+  &--h2 {
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 600;
+
+    @include vp-767 {
+      font-size: 24px;
+      line-height: 41px;
+    }
+  }
+
+  &--h3 {
+    font-size: 17px;
+    line-height: 28px;
+  }
+
+  &--light-black {
+    color: $color-title;
+  }
+
+  &--center {
+    text-align: center;
+  }
+}

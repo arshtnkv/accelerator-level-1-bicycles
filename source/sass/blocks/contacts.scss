@@ -1,0 +1,42 @@
+.contacts {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(195px, 300px));
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    @include vp-767 {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      grid-row-gap: 20px;
+    }
+  }
+
+  &__item {
+    svg {
+      margin-right: 20px;
+      color: $bg-green;
+    }
+
+    &:first-child {
+      svg {
+        width: 26px;
+        height: 20px;
+      }
+    }
+
+    &:last-child {
+      svg {
+        width: 17px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}

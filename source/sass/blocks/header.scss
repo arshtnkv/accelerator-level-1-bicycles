@@ -1,0 +1,24 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+
+  @include vp-767 {
+    height: 50px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    height: 100%;
+
+    @include vp-767 {
+      height: auto;
+    }
+  }
+}

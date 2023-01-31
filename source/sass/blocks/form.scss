@@ -1,0 +1,21 @@
+.form {
+  max-width: 327px;
+  z-index: 1;
+
+  @include vp-767 {
+    max-width: 100%;
+    width: 100%;
+    padding: 70px 20px 0;
+    background-color: $color-default-white;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-align: center;
+
+    @include vp-767 {
+      color: $color-default-black;
+    }
+  }
+}

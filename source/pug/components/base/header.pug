@@ -1,0 +1,35 @@
+mixin header(headerMods, currentUrl)
+  -
+    const headerLinks = [
+      {
+        href: "#about",
+        text: "О нас"
+      },
+      {
+        href: "#gallery",
+        text: "Виды велосипедов"
+      },
+      {
+        href: "#video-block",
+        text: "Видео про велосипеды"
+      },
+      {
+        href: "#contacts",
+        text: "Контакты"
+      },
+    ]
+
+  header.header(class=headerMods)
+    .container
+      +logo()
+      nav.main-nav
+        button.main-nav__toggle(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
+        .main-nav__wrapper
+          ul.main-nav__list
+            each link in headerLinks
+              - const activeState = currentUrl === link.href
+              li.main-nav__item
+                if(activeState)
+                  span.main-nav__link.link.is-active=link.text
+                else
+                  a.main-nav__link.link(href=link.href)=link.text

@@ -1,0 +1,71 @@
+.intro {
+  color: $color-default-white;
+  background-color: #161616;
+
+  .container {
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 264px;
+
+    @include vp-767 {
+      padding: 0;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+
+    @include vp-767 {
+      height: 56%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 260px;
+
+    @include vp-767 {
+      flex-direction: column;
+      padding-top: 100px;
+    }
+  }
+
+  &__caption {
+    max-width: 350px;
+    padding-top: 40px;
+    z-index: 0;
+
+    @include vp-767 {
+      max-width: 300px;
+      padding-top: 0;
+      margin: 0 auto;
+      text-align: center;
+      padding-bottom: 12%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 300;
+    color: rgba($color-default-white, 0.8);
+  }
+
+}

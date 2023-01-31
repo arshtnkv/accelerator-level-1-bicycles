@@ -1,0 +1,126 @@
+.main-nav {
+  &__wrapper {
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+
+    font-weight: 300;
+    color: rgba($color-default-white, 0.7);
+    border-bottom: 1px solid rgba($color-default-white, 0.2);
+    list-style: none;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 20px 20px 10px;
+
+    @include vp-767 {
+      padding: 0;
+    }
+  }
+
+  &__toggle {
+    display: none;
+
+    @include vp-767 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 10;
+      display: block;
+      width: 50px;
+      height: 50px;
+      padding: 0;
+      margin: 0;
+      outline: none;
+      border: none;
+      background-color: $bg-green;
+      transition: opacity $trans-default;
+      cursor: pointer;
+
+      &::before {
+        position: absolute;
+        top: 17px;
+        right: 14px;
+        width: 22px;
+        height: 2px;
+        content: "";
+        background-color: $color-default-black;
+        box-shadow: 0 7px 0 0 $color-default-black, 0 14px 0 0 $color-default-black;
+        transition: transform $trans-default;
+      }
+
+      @include hover-focus {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &.is-open {
+    .main-nav {
+      &__wrapper {
+        @include vp-767 {
+          position: fixed;
+          top: 0;
+          left: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100vh;
+          background-color: $color-default-white;
+          overflow: scroll;
+        }
+      }
+
+      &__list {
+        @include vp-767 {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          width: 100%;
+          color: $color-menu;
+          border: none;
+        }
+      }
+
+      &__link {
+        padding: 10px 10px;
+      }
+
+      &__toggle {
+        @include vp-767 {
+          background-color: transparent;
+
+          &::before,
+          &::after {
+            position: absolute;
+            top: 23px;
+            right: 13px;
+            content: "";
+            width: 28px;
+            height: 1px;
+            background-color: rgba($color-menu, 0.6);
+            box-shadow: none;
+            transition: transform $trans-default;
+          }
+
+          &::before {
+            transform: rotate(45deg);
+          }
+
+          &::after {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+}

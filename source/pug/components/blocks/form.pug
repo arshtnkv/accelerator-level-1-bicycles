@@ -1,0 +1,19 @@
+mixin form()
+  section.section.form&attributes(attributes)
+    h3.form__title.title.title--h3 Заполните поля ниже и&nbsp;мы&nbsp;подберем велосипед Вашей мечты
+    div(data-form-validate, data-callback="base")
+      form(action="" method="POST")
+        +custom-input({
+          inputLabel: "Введите ваше имя",
+          inputName: "user-name",
+          inputPlaceholder: "Введите ваше имя"
+        })(data-validate-type="text", data-limitation="name", data-message-base="Поле обязательно к заполнению", data-message-extra="Проверьте корректность заполнения поля", data-required)
+
+        +custom-input({
+          inputType: "tel",
+          inputLabel: "Введите ваш телефон",
+          inputName: "user-phone",
+          inputPlaceholder: "Введите ваш телефон"
+        })(data-validate-type="phone", data-on-input-validate, data-message-base="Поле обязательно к заполнению", data-message-extra="Проверьте корректность заполнения поля", data-message-success="Поле заполнено верно", data-required)
+
+        +btn({text: "Подобрать велосипед мечты", type: "submit"})

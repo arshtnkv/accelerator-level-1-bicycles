@@ -1,0 +1,27 @@
+mixin contacts()
+  -
+    const links = [
+      {
+        icon: "icon-mail",
+        iconWidth: 26,
+        iconHeight: 20,
+        href: "mailto::puteshestviemechta@gmail.ru",
+        text: "puteshestviemechta@gmail.ru"
+      },
+      {
+        icon: "icon-phone",
+        iconWidth: 17,
+        iconHeight: 24,
+        href: "tel:+7(499)784-684-46",
+        text: "+7 (499)-784-684-46"
+      },
+    ]
+
+  section#contacts.contacts
+    .container.container--xl
+      h2.visually-hidden Обратная связь
+      ul.contacts__list
+        each link in links
+          li.contacts__item
+            a.contacts__link.link(href=`${link.href}`)!= link.text
+              +icon(link.icon, link.iconWidth, link.iconHeight)

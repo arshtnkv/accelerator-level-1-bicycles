@@ -1,0 +1,29 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 14px 20px;
+
+  font-weight: 600;
+  font-size: 15px;
+
+  color: $color-default-black;
+  background-color: $bg-green;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+
+  transition: opacity $trans-default;
+
+
+  &:disabled {
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+}

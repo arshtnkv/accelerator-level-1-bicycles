@@ -1,0 +1,24 @@
+mixin video-block()
+  -
+    const videoData = {
+        video: {
+          width: "1165",
+          height: "655",
+          id: "player-1",
+          video:'U7EH2K0MsFU'
+        },
+        img: {
+          path: "content",
+          image: "video-cover",
+          format: "jpg",
+          width: "929",
+          height: "522",
+          altText: "обложка для видео",
+        }
+    }
+
+  section#video-block.video-block
+    .container.container--xl
+      h2.video-block__title.title.title--h2 Видео про&nbsp;велосипеды
+      p.video-block__text В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.
+      +video(videoData)
