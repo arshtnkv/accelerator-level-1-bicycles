@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>ProjectName</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Bicycles — продаём велосепеды">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div class="visually-hidden"></div>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container"><span class="header__logo"><img src="img/svg/logo.svg" width="68" height="20" alt="Логотип интернет-магазина «Велосипеды»"></span>
+          <nav class="main-nav">
+            <button class="main-nav__toggle" type="button" aria-label="Переключатель отображения меню" aria-pressed="false"></button>
+            <div class="main-nav__wrapper">
+              <ul class="main-nav__list">
+                <li class="main-nav__item"><a class="main-nav__link link" href="#about">О нас</a>
+                </li>
+                <li class="main-nav__item"><a class="main-nav__link link" href="#gallery">Виды велосипедов</a>
+                </li>
+                <li class="main-nav__item"><a class="main-nav__link link" href="#video-block">Видео про велосипеды</a>
+                </li>
+                <li class="main-nav__item"><a class="main-nav__link link" href="#contacts">Контакты</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <!-- Интро-->
+        <section class="section intro">
+          <div class="container">
+            <div class="intro__content">
+              <div class="intro__caption">
+                <h1 class="intro__title title title--h1">Мы продаем<br>велосипеды</h1>
+                <p class="intro__text">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+              </div>
+              <section class="section form">
+                <h3 class="form__title title title--h3">Заполните поля ниже и&nbsp;мы&nbsp;подберем велосипед Вашей мечты</h3>
+                <div data-form-validate data-callback="base">
+                  <form action="" method="POST">
+                    <div class="custom-input" data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
+                      <label><span class="custom-input__label">Введите ваше имя</span>
+                        <input type="text" name="user-name" placeholder="Введите ваше имя">
+                      </label>
+                    </div>
+                    <div class="custom-input" data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-required>
+                      <label><span class="custom-input__label">Введите ваш телефон</span>
+                        <input type="tel" name="user-phone" placeholder="Введите ваш телефон">
+                      </label>
+                    </div>
+                    <button class="btn" type="submit">Подобрать велосипед мечты</button>
+                  </form>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+        <!-- О нас-->
+        <section class="about" id="about">
+          <div class="container container--xl">
+            <h2 class="about__title title title--h2 title--light-black">Несколько фактов о нас</h2>
+            <ul class="about__list">
+              <li class="about__item">
+                <p class="about__text">Самый широкий выбор велосипедов!</p>
+              </li>
+              <li class="about__item">
+                <p class="about__text">Доставка велосипедов по всей России!</p>
+              </li>
+              <li class="about__item">
+                <p class="about__text">Большой выбор крутых аксессуаров!</p>
+              </li>
+              <li class="about__item">
+                <p class="about__text">Профессиональные консультации!</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- Галерея-->
+        <section class="gallery" id="gallery">
+          <div class="container container--xl">
+            <h2 class="gallery__title title title--h2">Виды велосипедов</h2>
+            <ul class="gallery__list">
+              <li class="gallery__item">
+                <figure>
+                  <picture>
+                    <source type="image/webp" srcset="img/content/gallery/img-1.webp, img/content/gallery/img-1@2x.webp 2x"><img src="img/content/gallery/img-1.jpg" srcset="img/content/gallery/img-1@2x.jpg 2x" width="342" height="503" alt="Дорожный велосипед">
+                  </picture>
+                  <figcaption>Дорожный велосипед</figcaption>
+                </figure>
+              </li>
+              <li class="gallery__item">
+                <figure>
+                  <picture>
+                    <source type="image/webp" srcset="img/content/gallery/img-2.webp, img/content/gallery/img-2@2x.webp 2x"><img src="img/content/gallery/img-2.jpg" srcset="img/content/gallery/img-2@2x.jpg 2x" width="342" height="503" alt="Горный велосипед">
+                  </picture>
+                  <figcaption>Горный велосипед</figcaption>
+                </figure>
+              </li>
+              <li class="gallery__item">
+                <figure>
+                  <picture>
+                    <source type="image/webp" srcset="img/content/gallery/img-3.webp, img/content/gallery/img-3@2x.webp 2x"><img src="img/content/gallery/img-3.jpg" srcset="img/content/gallery/img-3@2x.jpg 2x" width="342" height="503" alt="Детский велосипед">
+                  </picture>
+                  <figcaption>Детский велосипед</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- Блок с видео-->
+        <section class="video-block" id="video-block">
+          <div class="container container--xl">
+            <h2 class="video-block__title title title--h2">Видео про&nbsp;велосипеды</h2>
+            <p class="video-block__text">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+            <div class="video">
+              <div class="video__iframe" data-video="U7EH2K0MsFU" data-id="player-1" data-width="1165" data-height="655" data-cover="img/content/video-cover.jpg"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <section class="map" id="map">
+          <div class="container container--xl">
+            <h2 class="map__title title title--h2">Как нас найти?</h2>
+            <p class="map__text">Мы&nbsp;находимся по&nbsp;адресу: Санкт-Петербург, ул. Большая Конюшенная, д.&nbsp;19</p>
+          </div>
+          <div class="map__iframe">
+            <iframe class="contacts__google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.59910436516!2d30.320894616627125!3d59.93879418187623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1615642269901!5m2!1sru!2sru"></iframe>
+          </div>
+        </section>
+        <section class="contacts" id="contacts">
+          <div class="container container--xl">
+            <h2 class="visually-hidden">Обратная связь</h2>
+            <ul class="contacts__list">
+              <li class="contacts__item"><a class="contacts__link link" href="mailto::puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru
+                  <svg width="26" height="20" aria-hidden="true">
+                    <use xlink:href="#icon-mail"></use>
+                  </svg></a></li>
+              <li class="contacts__item"><a class="contacts__link link" href="tel:+7(499)784-684-46">+7 (499)-784-684-46
+                  <svg width="17" height="24" aria-hidden="true">
+                    <use xlink:href="#icon-phone"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+        </section>
+      </footer>
+    </div>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
