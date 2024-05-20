@@ -1,4 +1,4 @@
-# Bicycles: accelerator level 1
+# Bicycles: accelerator #1 [[HTML Academy]](https://htmlacademy.ru/)
 
 ### 📋 Проект акселератора #1: Landing Page (Старт 05.03.2021 - Дедлайн 15.03.2021)
 🔗 URL: <a href="https://bicycles-ebon.vercel.app/" target="_blank">bicycles-ebon.vercel.app</a>
